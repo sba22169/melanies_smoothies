@@ -33,7 +33,7 @@ session = cnx.session()
 
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'),col('SEARCH_ON'))
 st.dataframe(data=my_dataframe, use_container_width=True)
-ST.stop()
+st.stop()
 
 ingredients_list = st.multiselect(
     'Choose your fruit (5 max):', my_dataframe , max_selections=5)
