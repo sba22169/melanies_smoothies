@@ -9,7 +9,8 @@ from snowflake.snowpark.functions import col , when_matched
 import requests  
 # smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-st.text(smoothiefroot_response.json())
+# st.text(smoothiefroot_response.json())
+sf_df = st.datasframe(data=smoothiefroot_responce.json(), use_container_width=True
 
 # Write directly to the app
 st.title(f":cup_with_straw: Customize Your Smoothie :cup_with_straw: ")
